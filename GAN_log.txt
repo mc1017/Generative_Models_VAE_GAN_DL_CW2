@@ -18,5 +18,8 @@ Experimentations:
 5: paper + label_smoothing (0.1, 0.9) + data_aug (flip, rotate, colour) = rotattion create black boundaries
 6: paper + label_smoothing (0.1, 0.9) + data_aug (flip, colour) = removed block boundaries, still omeba like, slightly disoriented
 7: paper + label_smoothing (0.1, 0.9) + data_aug + deep layer = unrecognisable objects, omeba like
-8: paper + label_smoothing (0, 0.9) + data_aug + deep layer = slight better object, still omeba like
-
+8: paper + label_smoothing (0.05, 0.9) + data_aug + deep layer = slight better object, still omeba like
+9: paper + label_smoothing (0, 0,9) + data_aug + deep layer + top_k 0.99 = slightly better, no big difference
+10: paper + label_smoothing (0, 0,9) + data_aug + deep layer + top_k 0.95 + 2 iterations = Quality Deteriorated slightly. Remove iterations
+11: paper + dropout + label_smoothing (0, 0,9) + data_aug + deep layer + top_k 0.95 = mode collapse 
+12: paper + dropout + label_smoothing (0, 0,9) + data_aug + deep (discriminator) layer + top_k 0.95= ???  
