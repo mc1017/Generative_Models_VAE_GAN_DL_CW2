@@ -1,0 +1,20 @@
+Experimentations:
+- paper hyperparameter
+- deeper generator
+- more feature maps in discriminator
+- inner loop
+- diff rl with scheduler
+- feature matching
+- change epochs
+- 
+
+
+
+0: paper = nothing shows up
+1: paper + increased lr_G = slightly better colour, still messed up. 
+2: paper (corrected using batch norm) = much better pics. shows images, although muted and unrecognisable
+3: paper (adjusted discriminator archi, no tanh) = much better pics. shows images, no muted, some omeba like creatures
+4: paper + label_smoothing (0.1, 0.9) = similar to 3, still a lot of omebas
+5: paper + label_smoothing (0.1, 0.9) + data_aug (flip, rotate, colour) = rotattion create black boundaries
+6: paper + label_smoothing (0.1, 0.9) + data_aug (flip, colour)
+
