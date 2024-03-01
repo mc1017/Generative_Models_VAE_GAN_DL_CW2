@@ -22,4 +22,9 @@ Experimentations:
 9: paper + label_smoothing (0, 0,9) + data_aug + deep layer + top_k 0.99 = slightly better, no big difference
 10: paper + label_smoothing (0, 0,9) + data_aug + deep layer + top_k 0.95 + 2 iterations = Quality Deteriorated slightly. Remove iterations
 11: paper + dropout + label_smoothing (0, 0,9) + data_aug + deep layer + top_k 0.95 = mode collapse 
-12: paper + dropout + label_smoothing (0, 0,9) + data_aug + deep (discriminator) layer + top_k 0.95= ???  
+12: paper + dropout + label_smoothing (0, 0,9) + data_aug + deep (discriminator) layer + top_k 0.95= still mode collapse (dropout removed)
+13: paper + label_smoothing (0, 0.9) + data_aug + deep (discriminator) layer + top_k 0.95 + 100 Epochs = work extremely well, much better in image quality with a few directly recognisable objects. Slightly dimmed, should remove Tanh
+14: paper + label_smoothing (0, 0.9) + data_aug + deep (discriminator) layer + top_k 0.95 + 100 Epochs+ no tanh = even more grey. Include Tanh back
+15/16: paper + label_smoothing (0, 0.9) + data_aug + deep (discriminator) layer + top_k 0.95 + 100 Epochs + variance (0.55, 0.55) = good colour
+17: paper + label_smoothing (0, 0.9) + data_aug + deep (discriminator) layer + top_k 0.95 + 100 Epochs + variance (0.55, 0.55) + adjusted learning rate = worse generator
+18: lower learning rate to (0.0002, 0.0001)
